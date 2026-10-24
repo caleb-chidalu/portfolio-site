@@ -46,7 +46,15 @@
 
     <section id="contact" class="wrap">
       <h2>Get in touch</h2>
-      <p><a class="btn" href="https://cal.com/caleb-chidalu/15min">Book a 15-minute call</a></p>
+      <form name="contact" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
+        <p><label for="name">Your name</label><input id="name" name="name" type="text" required></p>
+        <p><label for="email">Your email</label><input id="email" name="email" type="email" required></p>
+        <p><label for="message">What would you like to talk about?</label><textarea id="message" name="message" rows="5" required></textarea></p>
+        <button class="btn" type="submit">Send a message</button>
+      </form>
+      <p class="or">Prefer a call? <a href="https://cal.com/caleb-chidalu/15min">Book 15 minutes</a>.</p>
       <ul class="links">
         <li><a href="https://www.linkedin.com/in/caleb-chidalu-4600a1340/">LinkedIn</a></li>
         <li><a href="https://github.com/caleb-chidalu">GitHub</a></li>
