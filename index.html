@@ -72,5 +72,11 @@
     <p>&copy; 2026 Caleb Chidalu</p>
   </footer>
 
+<script>
+  document.querySelector('form').addEventListener('submit', function () {
+    var btn = this.querySelector('button[type="submit"], input[type="submit"]');
+    if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
+  });
+</script>
 </body>
 </html>
